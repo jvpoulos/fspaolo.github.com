@@ -120,13 +120,14 @@ strong {
     }
 
 #logo {
-    font-size: 46px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    letter-spacing: 7px;
+    letter-spacing: -1px;
     opacity: 0.1;
-    padding-top: 70px;
+    margin-top: -4px;
+    margin-bottom: 140px;
     }
     #logo span {
         color: red;

@@ -2,11 +2,6 @@
 Style sheet for: fspaolo.net
 Fernando Paolo <fspaolo@gmail.com>
 April 23, 2011
-
-colors
-------
-yellow: FF3F3F
-red: F00
 */
 
 * {
@@ -59,7 +54,7 @@ body {
     background-image: url(http://www.typographer.org/Resources/bg.gif);
     font-family: "lucida grande", "lucida sans unicode", sans-serif;
     font-size: 12px;
-    line-height: 1.5;
+    line-height: 1.45;
     color: #444;
     padding: 0;
     margin: 0;
@@ -129,7 +124,7 @@ strong {
         text-transform: lowercase;
         }
     #topbar span {
-        color: #FF3F3F;
+        color: #EE1289;
         }
 .nav ul {
     font-family: "lucida grande", "lucida sans unicode", sans-serif;
@@ -148,7 +143,7 @@ strong {
         */
     }
     .nav a:active, .nav a:hover {
-        background-color: #FF3F3F;
+        background-color: #EE1289;
         color: white;
         /*
         border-bottom: 2px solid #E8E8E8;
@@ -190,7 +185,7 @@ strong {
         */
     }
     article p a:hover, ul a:hover {
-        background-color: #FF3F3F;
+        background-color: #EE1289;
         color: white;
         /*
         border-bottom: 2px solid #E8E8E8;
@@ -226,7 +221,7 @@ footer {
         color: #777;
     }
     footer a:hover {
-        background-color: #FF3F3F;
+        background-color: #EE1289;
         text-decoration: none;
     }
 

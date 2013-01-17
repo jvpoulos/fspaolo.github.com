@@ -5,7 +5,7 @@ April 23, 2011
 
 colors
 ------
-yellow: DA3C26
+yellow: FF3F3F
 red: F00
 */
 
@@ -54,13 +54,12 @@ table {
 
 body {
     /*
-    background: #F0EFE7;
-    background-color: #FCFCFA;
-    background-color: #EAE9E8;
+    background-image: url(http://www.typographer.org/temp-bg.gif);
     */
+    background-image: url(http://www.typographer.org/Resources/bg.gif);
     font-family: "lucida grande", "lucida sans unicode", sans-serif;
     font-size: 12px;
-    line-height: 1.65;
+    line-height: 1.5;
     color: #444;
     padding: 0;
     margin: 0;
@@ -71,11 +70,11 @@ body {
 
 h1, h1 a {
     font-family: "adelle-1","adelle-2", Georgia;
-    font-size: 54px;
+    font-size: 50px;
     text-transform: capitalize;
     line-height: 1.15;
     color: #444;
-    margin-bottom: -5px;
+    padding-bottom: 15px;
     }
 h2, h3, h4, h5, h2 a, h3 a, h4 a, h5 a {
     font-family: "adelle-1","adelle-2", Georgia;
@@ -119,28 +118,19 @@ strong {
     color: #444;
     }
 
-#logo {
-    font-size: 22px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: -1px;
-    opacity: 0.1;
-    margin-top: -4px;
-    margin-bottom: 140px;
-    }
-    #logo span {
-        color: red;
-        }
-
 /* navigation */
 
 #topbar {
     color: white;
-    padding: 20px 0 30px 0;
-    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
     }
-
+    #topbar logo {
+        text-transform: lowercase;
+        }
+    #topbar span {
+        color: #FF3F3F;
+        }
 .nav ul {
     font-family: "lucida grande", "lucida sans unicode", sans-serif;
     }
@@ -152,14 +142,18 @@ strong {
     .nav a {
         font-weight: bold;
         color: #444;
+        /*
         border-bottom: 2px solid #E8E8E8;
         padding: 0.1em 0.1em 0;
+        */
     }
     .nav a:active, .nav a:hover {
-        background-color: #DA3C26;
+        background-color: #FF3F3F;
         color: white;
+        /*
         border-bottom: 2px solid #E8E8E8;
         text-decoration: none;
+        */
     }
 
 /* toc */
@@ -174,16 +168,9 @@ strong {
 #main {
     width: 500px;
     min-height: 100%;
-    border-top: solid 5px lightgray;
-    border-bottom: solid 5px lightgray;
-    /*
-    border: solid 2px #E2E0D8;
-    -webkit-border-radius: 0 0 6px 6px;
-       -moz-border-radius: 0 0 6px 6px;
-            border-radius: 0 0 6px 6px;
-    */
+    background-color: white;
     padding: 20px 20px;
-    margin: 0 auto;
+    margin: 0 80px;
     }
 .content {
     margin: 0 auto;
@@ -197,14 +184,18 @@ strong {
     article p a, article ul a {
         font-weight: bold;
         color: #444;
+        /*
         border-bottom: 2px solid #E8E8E8;
         padding: 0.1em 0.1em 0;
+        */
     }
     article p a:hover, ul a:hover {
-        background-color: #DA3C26;
+        background-color: #FF3F3F;
         color: white;
+        /*
         border-bottom: 2px solid #E8E8E8;
         text-decoration: none;
+        */
     }
     article ul {
         list-style-type: square;
@@ -214,7 +205,7 @@ strong {
         margin-bottom: 15px;
     }
     article img {
-        max-width: 460px;
+        max-width: 440px;
         border: solid 1px #444;
         margin: 0;
     }
@@ -228,15 +219,14 @@ footer {
     text-align: left;
     font-size: 12px;
     color: #999;
-    padding-top: 40px;
-    padding-bottom: 50px;
-    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
     }
     footer a {
         color: #777;
     }
     footer a:hover {
-        background-color: #DA3C26;
+        background-color: #FF3F3F;
         text-decoration: none;
     }
 

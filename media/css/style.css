@@ -1,351 +1,314 @@
 /*
-Theme Name:Simon Foster Design V4
-Theme URI: http://simonfosterdesign.com
-Description: The theme for me
-Author: Simon Foster
-Author URI: http://simonfosterdesign.com
-Version: 4
-.
-This website and it's design and code are the property of Simon Foster, it is not a template that you can borrow, adapt or copy. Please exercise your own creativity and do your own thing.
-If you do steal this design and use it for yourself and I find out about it I will publicly name and shame you to the entire web design world and you'll 
-never work again and your children will go hungry. 
-
-.
+Style sheet for: fspaolo.net
+Fernando Paolo <fspaolo@gmail.com>
+April 23, 2011
 */
 
-
-/* reset  */
-
-html, body, div, a, p, img, ul, li, footer, header, section, h1, span, time, hr, hgroup, a img, aside, nav, form, input, article, h2, h3, h4, label, textarea, small {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-  text-decoration:none;
+* {
+    vertical-align: baseline;
+    font-weight: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    font-size: 100%;
+    padding: 0;
+    border: 0;
+    margin: 0;
 }
-footer, section, article, header, aside, nav { 
-    display:block;
+
+table {
+    border-collapse: collapse;
 }
+
 :focus {
-    outline:none; 
-  }
-::-moz-selection, ::selection { 
-    color:#fff;
-  background:#c22a09; 
-  }
-ul {
-    list-style:none;
-  }
-h1, h2, h3, h4 {
-    font-weight:normal;
-  }
-/* end reset */   
+    outline: 0;
+}
 
-html {
-   height:101%;
-  border-top:solid 8px #333;
-   }
-   
+::-moz-focus-inner {
+    border: 0;
+}
+
+/* clearfix */
+.clear:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    display: block;
+}
+
+
+* html .clear {
+    height: 1%;
+}
+
 body {
-   font-size:20px;
-   color:#333;
-   font-family:minion-pro, Georgia, Times new roman, serif;
-   font-weight:lighter;
-   -webkit-text-size-adjust:100%;
-   line-height:1.3em;
-   }
+    /*
+    background-image: url(http://www.typographer.org/temp-bg.gif);
+    */
+    background-image: url(http://www.typographer.org/Resources/bg.gif);
+    font-family: "lucida grande", "lucida sans unicode", sans-serif;
+    font-size: 12px;
+    line-height: 1.45;
+    color: #444;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    }
 
-/* header section */
+/* headlines */
 
-
-
-.masthead {
-    width:100%;
-    padding:145px 0;
-    } 
-.inner {
-  width:96%;
-  max-width:1200px;
-  margin:0 auto;
-  overflow:auto;
-  }
-.inner_no_overflow {
-  width:96%;
-  max-width:1200px;
-  margin:0 auto;
-  }
-.border_top {
- border-top:solid 1px #eee;
- border-bottom:solid 1px #eee;
- padding:80px 0 0 0;
+h1, h1 a {
+    font-family: "adelle-1","adelle-2", Georgia;
+    font-size: 50px;
+    text-transform: capitalize;
+    line-height: 1.15;
+    color: #444;
+    padding-bottom: 15px;
+    }
+h2, h3, h4, h5, h2 a, h3 a, h4 a, h5 a {
+    font-family: "adelle-1","adelle-2", Georgia;
+    color: #444;
+    margin-left: 0
+    }
+h2, h2 a {
+    font-size: 27px;
+    }
+h3, h3 a { 
+    font-size: 25px;
+    }
+h4, h4 a {
+    font-size: 19px;
 }
-.masthead h1 {
-  width:100%;
-  text-align:center;
-  font-family:brandon-grotesque, Helvetica neue, Arial, sans-serif;
-  font-size:2.2em;
-  line-height:1em;
-  letter-spacing:1px;
-  }
-  h1 span {
-    margin:0 0 0 -2px;
-  }
-header a, .subnav a, .info_block a:hover, .subnav p a:hover, .portfolio_nav a, article a:hover {
-  color:#333;
-  }
-header a:hover, .subnav a:hover, article a, .info_block a, .subnav p a, .portfolio_nav a:hover { 
-    color:#c22a09; 
-  }
-.menu {
-  text-align:center;
-  display:block;
-  width:100%;
-  padding:5px 0 0 0;
-  font-size:0.9em;
-  }
-.menu li {
-  display:inline;
-  padding:0 9px;
-  }
-.menu a {
-  display:inline-block;
-  }
-  
-
-/* layout */
-
-
-.block {
-  width:100%;
+h5, h5 a{
+    font-size: 17px;
 }
-.textured {
-  background:url(images/texture.jpg) center top fixed;
-} 
-.texture {
-  background:url(http://www.peerpressureworks.com/wp-content/uploads/2010/08/shockedCat_1.jpg) center top fixed;
-  background-size:100px auto;
-}
-.texture img {
-  opacity:0;
-}
-/* home page */
+h6, h6 a {
+    font-family: "adelle-1","adelle-2", Georgia;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #444;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    }
+h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited { 
+    color: #444;
+    }
+h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+    color: #444;
+    }
 
+em {
+    font-style: italic;
+    }
 
-.main_image {
-  width:100%;
-  height:auto;
-}
+strong {
+    font-weight: bold;
+    color: #444;
+    }
+
+/* navigation */
+
+#topbar {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    }
+    #topbar logo {
+        text-transform: lowercase;
+        }
+    #topbar span {
+        color: #EE1289;
+        }
+.nav ul {
+    font-family: "lucida grande", "lucida sans unicode", sans-serif;
+    }
+    .nav li {
+        display: inline;
+        padding: 0 8px;
+        text-transform: lowercase;
+        }
+    .nav a {
+        font-weight: bold;
+        color: #444;
+        /*
+        border-bottom: 2px solid #E8E8E8;
+        padding: 0.1em 0.1em 0;
+        */
+    }
+    .nav a:active, .nav a:hover {
+        background-color: #EE1289;
+        color: white;
+        /*
+        border-bottom: 2px solid #E8E8E8;
+        text-decoration: none;
+        */
+    }
+
+/* toc */
+
+.toc {
+    padding: 0;
+    margin: 0;
+    }
+
+/* main container */
+
+#main {
+    width: 500px;
+    min-height: 100%;
+    background-color: white;
+    padding: 20px 20px;
+    margin: 0 90px;
+    }
+.content {
+    margin: 0 auto;
+    }
+    article p {
+        line-height: 1.8em;
+        font-size: 1em;
+        margin: 0;
+        margin-bottom: 20px;
+        }
+    article p a, article ul a {
+        font-weight: bold;
+        color: #444;
+        /*
+        border-bottom: 2px solid #E8E8E8;
+        padding: 0.1em 0.1em 0;
+        */
+    }
+    article p a:hover, ul a:hover {
+        background-color: #EE1289;
+        color: white;
+        /*
+        border-bottom: 2px solid #E8E8E8;
+        text-decoration: none;
+        */
+    }
+    article ul {
+        list-style-type: square;
+        padding: 0;
+        padding-left: 18px;
+        margin: 0; 
+        margin-bottom: 15px;
+    }
+    article img {
+        max-width: 440px;
+        border: solid 1px #444;
+        margin: 0;
+    }
 
 /* footer */
 
-
-footer { 
-  width:100%;
-  border-top:solid 1px #eee;
-   }
-footer small {
-  width:100%;
-  text-align:center;
-  padding:120px 0;
-  display:block;
-   }
-   
-   
-/* portfolio articles */  
-
-
-article  {
-  width:90%;
-  max-width:800px;
-  margin:0 auto;
-  overflow:auto;
-  padding:0 0 60px 0;
-  }
-.intro {
-  padding:120px 0 60px 0;
-  max-width:700px;
-}
-.single_inner {
-  width:98%;
-  max-width:900px;
-  margin:0 auto;
-  overflow:auto;
-  }
-article h1, .archive_header {
-   width:100%;
-   text-align:center;
-   padding:80px 0;
-   font-size:1.8em;
-   font-style:italic;
-   border-top:solid 1px #eee;
-  }
-article img {
-  width:100%;
-  max-width:800px;
-  height:auto;
-  }
-article img.border {
-  width:99.7%;
-  border:solid 1px #eee;
-  }
-article h3 {
-  margin:60px 0 40px 0;
-  font-size:1.5em;
-  font-style:italic;
-  }
-article p {
-  margin:0 0 60px 0;
-  clear:both;
-  line-height:1.5em;
-  font-size:1.1em;
-  word-spacing:1px;
-  } 
-article p.large {
-  font-size:1.2em;
-}
-article ul {
-  font-size:1.1em;
-  margin: 0 0 60px 0;
-  line-height:1.5em;
-}
-hr {
-  border:none;
-  height:1px;
-  background:#eee;
-}
-article hr {
-  margin:60px 0 100px 0;
-}
-
-
-
-
-/* portfolio archive section */
-
-
-
-.portfolio_nav {
-    width:100%;
-    float:left;
-    padding:0 0 80px 0;
-   }
-.portfolio_nav li {
-    width:33.33%;
-    float:left;
-    margin:0 0 60px 0;
-    position:relative;
+footer {
+    width: 500px;
+    font-family: "lucida grande", "lucida sans unicode", sans-serif;
+    height: 20px;
+    text-align: left;
+    font-size: 12px;
+    color: #999;
+    padding-top: 10px;
+    padding-bottom: 30px;
     }
-.portfolio_nav img {
-   width:100%;
-   height:auto;
-   float:left;
-   }
-.portfolio_nav img:hover {
-   opacity:0.8;
-   }
-.portfolio_nav h2 {
-  width:100%;
-  text-align:center;
-  }  
+    footer a {
+        color: #777;
+    }
+    footer a:hover {
+        background-color: #EE1289;
+        text-decoration: none;
+    }
 
 
-/* ipad mq */ 
-@media (max-width: 1024px){
-article  {
-  max-width:600px;
-  }
-}
+/* listing */
 
-@media (max-width: 768px){
-.masthead {
-    padding:80px 0;
+.blog_excerpt {
+    padding-bottom: 324px;
     } 
-.intro {
-  padding:80px 0 40px 0;
-}
-.portfolio_nav li {
-    width:50%;
-    }
-.portfolio_nav li.category-sketchbook {
-    width:33.33%;
-    }
-footer small {
-  padding:60px 0;
-   }
-} 
 
-
-/* iphone mq */
-
-
-@media (max-width: 600px) {
-  body {
-   font-size:18px;
- }
- .masthead {
-    padding:60px 0;
+small {
+    font-family: "helvetica neue", helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    color: #444;
     }
-.masthead h1 {
-  font-size:2.2em;
-  }
-article  {
-  padding:0 0 40px 0;
-  }
-.intro {
-  padding:40px 0 40px 0;
-}
-article p.large {
-  font-size:1.3em;
-} 
-article p {
-  font-size:1.3em;
-  line-height:1.4em;
-  margin:0 0 40px 0;
-}
-article ul {
-  margin:0 0 40px 0;
-}
-article h3 {
-  font-size:1.5em;
-  }
-article hr {
-   margin:60px 0;
-   }  
-article img.border {
-  width:99%;
-  }
-.portfolio_nav {
-    padding:0 0 40px 0;
-   }
-.portfolio_nav li {
-    width:100%;
+    small a {
+        color: #444;
+        }
+    small a:hover {
+        color: white;
+        border-bottom: 2px solid #E8E8E8;
+        }
+    small time {
+        font-family: "helvetica neue", helvetica, sans-serif;
+        font-size: 0.85em;
+        font-style: normal;
+        font-weight: bold;
+        color: #444;
+        }
+    
+.listing {
+    margin-top: 25px;
+    margin-bottom: 12px;
     }
-.portfolio_nav li.category-sketchbook {
-    width:50%;
-    }
-article h1, .archive_header {
-  padding:40px 0;
-}
-h3 {
-  width:100%;
-  text-align:center;
-}
-  }
+   .listing img {
+       width: 400px;
+        border: solid 1px #444;
+       }
+   .listing li {
+       list-style: none;
+       background: none;
+       float: left;
+       width: 100%;
+       padding: 0;
+       margin-bottom: 4px;
+       }
+    
+/* code */
 
-@media (max-width: 320px) {
-.masthead h1 {
-  font-size:2em;
-  }
-.portfolio_nav li {
-    margin:0 0 40px 0;
+pre, code {
+    font-family: monospace, Monaco, Andale Mono, Courier New;
+    font-size: 13px;
+    color: #444;
+    overflow-x: auto;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3em;
     }
-}
-
-@media (-webkit-min-device-pixel-ratio : 1.5) {
-  h1 span {
-    margin:0 0 0 -1px;
-  }
-}
+    pre {
+        padding: .6em 1em;
+        margin-top: -10px;
+        margin-bottom: 15px;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: 3px;
+    }
+    pre::-webkit-scrollbar {
+        height: 20px;
+    }
+    pre::-webkit-scrollbar-button:start,
+    pre::-webkit-scrollbar-button:end {
+        display: none;
+    }
+    pre::-webkit-scrollbar-track-piece  {
+        background-color: #eee;
+    }
+    pre::-webkit-scrollbar-thumb {
+        background-color: #bbb;
+        border: 7px solid #eee;
+        -webkit-background-clip: padding-box;
+        -webkit-border-radius: 12px;
+    }
+    p code, li code {
+        border: 1px solid #ccc;
+        font-size: 12px;
+        padding: 1px 3px;
+        line-height: 15px;
+        margin: 0;
+        white-space: nowrap;
+    }

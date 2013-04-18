@@ -198,11 +198,18 @@ ol, ul {
    ========================================================================== */
 img {
     display: block;  /* very important! */
-    max-width: 85%;
+    max-width: 90%;
+    height: auto;
     margin: 1.5em auto;
     border:solid 1px #eee;
     -ms-interpolation-mode: bicubic;
   }
+
+@media \0screen {
+  img { 
+  	width: auto; /* for ie 8 */
+  }
+}
 
 /*
  * Corrects overflow displayed oddly in IE9
@@ -258,8 +265,9 @@ body {
   /* improves the text rendering in more recents browsers */
   text-rendering: optimizeLegibility; }
 
-#content {
-  width: 662px;
+#container {
+  width: 600px;
+  max-width: 70%;
   margin: 0 auto;
     }
 
@@ -383,7 +391,7 @@ footer {
 /* Main container */
 #main {
     width: 662px;
-    max-width: 50%;
+    max-width: 90%;
     margin: 0 auto;
     }
 

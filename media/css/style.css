@@ -243,12 +243,9 @@ footer small {
     article  {
       padding:0 0 40px 0;
       }
-    p.large {
-      font-size:1.3em;
-    } 
     p {
       font-size:1.3em;
-      line-height:1.4em;
+      line-height:1.5em;
       margin:0 0 40px 0;
     }
     ul {

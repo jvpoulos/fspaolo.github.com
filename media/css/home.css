@@ -43,12 +43,12 @@ body {
 	background: #FFF;
 	color: #ccc;
 	font-size: 12px;
-	font-family: Arial, helvetica, sans-serif;
+	font-family: Helvetica Neue, Arial, sans-serif;
 	}
 
 #wrapper {
 	width: 460px;
-	padding: 50px 10px;
+	padding: 33px 10px;
 	margin: 0 auto;
 	}
 
@@ -64,12 +64,12 @@ article {
 	}
 	
 	#mastHead h1 {
-                font-family: Futura, Arial, Helvetica, sans-serif;
-                font-size: 40px;
+                font-size: 110px;
                 font-weight: bold;
-                letter-spacing: -2px;
+                letter-spacing: -13px;
                 text-align: right;
-		margin-bottom: 58px;
+		margin-right: 10px;
+		margin-bottom: 35px;
 		display: block;
 		}
 
@@ -80,11 +80,10 @@ article {
 	}
 			
 #mastHead li {
-	font-family: Helvetica Neue, Arial, sans-serif;
 	text-transform: uppercase;
 	font-size: 72px;
         font-weight: bold;
-        letter-spacing: -3px;
+        letter-spacing: -4px;
 	text-align: right;
 	margin-bottom: 1px;
 	}
@@ -112,7 +111,6 @@ span {
 		}
 		
 	#mastHead h1 {
-		background: url(../images/jtm-logo-mobile.gif) 0 0 no-repeat;
 		width: 76px;
 		height: 50px;
 		margin-bottom: 20px;

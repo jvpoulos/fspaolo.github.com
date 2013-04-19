@@ -45,9 +45,7 @@ h1, h2, h3, h4 {
 
 html {
     height:101%;
-    /*
-    border-top:solid 4px #333;
-    */
+    border-top:solid 8px #333;
    }
    
 body {
@@ -227,7 +225,7 @@ footer small {
 
 @media (max-width: 600px) {
       body {
-       font-size:18px;
+       font-size:14px;
      }
      .masthead {
         padding:60px 0;

@@ -265,19 +265,19 @@ footer small {
       width:100%;
       text-align:center;
     }
-  ol {
-    margin-left: 24px;
-    padding-left: 9px; }
-
-  ul {
-    margin-left: 19px; }
-
-  ul li {
-    padding-left: 14px; }
-
-  blockquote {
-    margin: 1.5em 24px 1.5em 24px;
-    padding-left: 9px; }
+    ul {
+      font-size: 1.3em;
+    }
+    ol, ul {
+      margin-left: 24px;
+      }
+    ul li, ol li {
+      width: 95%;
+    }
+    
+    blockquote {
+      margin: 1.5em 24px 1.5em 24px;
+      padding-left: 9px; }
   }
 
 @media (max-width: 320px) {

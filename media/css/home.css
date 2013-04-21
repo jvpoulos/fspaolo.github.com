@@ -70,13 +70,14 @@ article {
                 font-style: italic;
                 text-align: right;
 		display: block;
+                margin-bottom: 10px;
 		}
 
 #mastHead ul {
 	clear: both;
 	display: block;
-	padding-top: 60px;
-	padding-bottom: 40px;
+	padding-top: 2em;
+	padding-bottom: 3em;
 	}
 			
 #mastHead li {

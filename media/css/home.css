@@ -64,19 +64,19 @@ article {
 	}
 	
 	#mastHead h1 {
-                font-size: 110px;
-                font-weight: bold;
-                letter-spacing: -13px;
+                font-family: Georgia, serif;
+                font-size: 40px;
+                text-transform: lowercase;
+                font-style: italic;
                 text-align: right;
-		margin-right: 10px;
-		margin-bottom: 35px;
 		display: block;
 		}
 
 #mastHead ul {
 	clear: both;
 	display: block;
-	padding-bottom: 30px;
+	padding-top: 60px;
+	padding-bottom: 40px;
 	}
 			
 #mastHead li {
@@ -108,8 +108,7 @@ article {
 		}
 		
 	#mastHead h1 {
-		font-size: 61px;
-		margin-bottom: 18px;
+		font-size: 23px;
 		}
 		
 	#mastHead li {

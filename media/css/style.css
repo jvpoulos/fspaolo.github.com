@@ -31,11 +31,7 @@ header, aside, nav {
     color:#fff;
     background:#c22a09; 
     }
-/*
-ul {
-    list-style:none;
-    }
-*/
+
 h1, h2, h3, h4 {
     font-weight: normal;
     }
@@ -124,7 +120,7 @@ h1, h2, h3, h4 {
 
 h1 {
    width:100%;
-   font-size:2em;
+   font-size:2.1em;
    text-align:center;
    padding:40px 0;
   }
@@ -155,18 +151,6 @@ hr {
   margin:60px 0 100px 0;
 }
 
-/* header */
-
-/*
-header { 
-  width:100%;
-  border-bottom:solid 1px #eee;
-  text-align:center;
-  padding:120px 0;
-  display:block;
-   }
-       */
-   
 /* footer */
 
 footer { 
@@ -232,13 +216,13 @@ footer small {
 
 @media (max-width: 600px) {
       body {
-       font-size:14px;
+       font-size:15px;
      }
      .masthead {
         padding:60px 0;
         }
     h1 {
-      font-size:2.3em;
+      font-size:2.4em;
       }
     article  {
       padding:0 0 40px 0;
@@ -246,10 +230,10 @@ footer small {
     p {
       font-size:1.3em;
       line-height:1.5em;
-      margin:0 0 40px 0;
+      margin:0 0 30px 0;
     }
     h2 {
-      font-size:1.6em;
+      font-size:1.7em;
       }
     hr {
        margin:60px 0;
@@ -262,7 +246,6 @@ footer small {
     }
     h2 {
       width:100%;
-      text-align:center;
     }
     ul {
       font-size: 1.3em;
@@ -271,7 +254,7 @@ footer small {
       margin-left: 24px;
       }
     ul li, ol li {
-      width: 95%;
+      width: 97%;
     }
     
     blockquote {

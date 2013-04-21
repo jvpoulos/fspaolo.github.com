@@ -111,11 +111,12 @@ article {
 		font-size: 23px;
 		}
 		
-	#mastHead lu {
-	    padding-bottom: 1.2em;
+	#mastHead ul {
+	    padding-top: 0;
+	    padding-bottom: 20px;
             }
 	#mastHead li {
-		font-size: 40px;
-		}	
+	    font-size: 40px;
+	    }	
 	
 }

@@ -48,7 +48,7 @@ body {
 
 #wrapper {
 	width: 460px;
-	padding: 33px 10px;
+	padding: 100px 10px;
 	margin: 0 auto;
 	}
 
@@ -65,18 +65,16 @@ article {
 	
 	#mastHead h1 {
                 font-family: Georgia, serif;
-                font-size: 40px;
+                font-size: 36px;
                 text-transform: lowercase;
                 text-align: right;
 		display: block;
-                margin-bottom: 10px;
 		}
 
 #mastHead ul {
 	clear: both;
 	display: block;
-	padding-top: 2em;
-	padding-bottom: 3em;
+	padding-bottom: 32px;
 	}
 			
 #mastHead li {
@@ -108,15 +106,14 @@ article {
 		}
 		
 	#mastHead h1 {
-		font-size: 23px;
+		font-size: 21px;
 		}
 		
 	#mastHead ul {
-	    padding-top: 0;
-	    padding-bottom: 20px;
+	    padding-bottom: 21px;
             }
 	#mastHead li {
 	    font-size: 40px;
-	    }	
+	    }
 	
 }

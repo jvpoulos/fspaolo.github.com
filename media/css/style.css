@@ -45,13 +45,13 @@ h1, h2, h3, h4 {
 
 html {
     height:101%;
-    border-top:solid 8px #333;
+    border-top:solid 4px #333;
    }
    
 body {
-   font-size:16px;
+   font-size:17px;
    color:#111;
-   font-family: "lucida grande", "lucida sans unicode", sans-serif;
+   font-family: Georgia, serif;
    font-weight:lighter;
    -webkit-text-size-adjust:100%;
    }
@@ -84,7 +84,7 @@ small {
 
 ol, ul {
   margin: 1.14286em 0 1.14286em 53px;
-  line-height:1.5em;
+  line-height:1.6em;
   padding-left: 22px;
   list-style-position: outside;
 }
@@ -112,15 +112,14 @@ img {
 
 article  {
   width:90%;
-  max-width:600px;
+  max-width:560px;
   overflow:auto;
   padding:0 0 60px 0;
   margin:0 auto;
   }
 
 h1, h2, h3, h4 {
-   font-family: Helvetica Neue, Arial, sans-serif;
-   font-weight: bold;
+    Font-style: italic;
     }
 
 h1 {
@@ -139,7 +138,7 @@ h2 {
 p {
   clear:both;
   font-size:1.1em;
-  line-height:1.5em;
+  line-height:1.6em;
   word-spacing:1px;
   margin:0 0 30px 0;
   } 

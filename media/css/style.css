@@ -254,8 +254,9 @@ footer small {
     img.border {
       width:99%;
       }
-    p ul {
+    ul {
       font-size: 1.3em;
+      width: 100%;
     }
     ol, ul {
       margin-left: 24px;

@@ -110,11 +110,7 @@ article {
 	}
     }
 
-/* iphone (and other smart phones) */
-
-/* original
-@media only screen and (max-width: 479px) {
-*/
+/* iphone (and other smartphones) */
 
 @media only screen and (max-width: 767px) {
 	

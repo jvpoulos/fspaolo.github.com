@@ -217,11 +217,10 @@ footer small {
 
     }
 
+/* iphone (and other smartphones) */
 
-/* iphone mq */
+@media only screen and (max-width: 767px) {
 
-
-@media (max-width: 600px) {
       body {
        font-size:14px;
      }

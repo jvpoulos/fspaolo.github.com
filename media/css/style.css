@@ -219,27 +219,24 @@ footer small {
 
 /* iphone (and other smartphones) */
 
-@media only screen and (max-width: 467px) {
+@media only screen and (max-width: 767px) {
 
       body {
-       font-size:14px;
+       font-size:15px;
      }
-     .masthead {
-        padding:60px 0;
-        }
     h1 {
-      font-size:2.5em;
+      font-size:2.6em;
       padding-top:60px;
       padding-bottom:30px;
       }
     h2 {
       width:100%;
-      font-size:1.7em;
+      font-size:1.8em;
       text-align: center;
       }
     h1, h2 {
       line-height: 1.3em;
-  }
+    }
     article  {
       padding:0 0 40px 0;
       }
@@ -257,6 +254,7 @@ footer small {
     ul {
       font-size: 1.3em;
       margin:0;
+      padding:0;
     }
     ol, ul {
       margin-left: 24px;

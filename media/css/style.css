@@ -256,11 +256,14 @@ footer small {
       }
     ul {
       font-size: 1.3em;
+      margin:0;
     }
     ol, ul {
       margin-left: 24px;
-      width: 100%;
       }
+    ul li, ol li {
+      width: 100%;
+    }
     
     blockquote {
       margin: 1.5em 24px 1.5em 24px;

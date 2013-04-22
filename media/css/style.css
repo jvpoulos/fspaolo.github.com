@@ -256,7 +256,7 @@ footer small {
       }
     ul {
       font-size: 1.3em;
-      line-height:0.1em;
+      line-height:0;
     }
     ol, ul {
       margin-left: 24px;

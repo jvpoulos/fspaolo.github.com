@@ -4,12 +4,45 @@
  *  April 17, 2013
  */
 
+/* reset  */
+
+html, body, div, p, img, ul, ol,
+footer, header, section, h1, span, 
+time, hr, hgroup, a img, aside, nav, 
+form, input, article, h2, h3, h4, 
+label, textarea, small {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    text-decoration:none;
+    }
+footer, section, article, 
+header, aside, nav { 
+    display:block;
+    }
+:focus {
+    outline:none; 
+    }
+::-moz-selection, ::selection { 
+    color:#fff;
+    background:#c22a09; 
+    }
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+    }
+
+/* end reset */   
 html {
     height:101%;
    }
    
 body {
-    font: 17px/25px 'Palatino', 'Palatino Linotype', 'Georgia', serif;
+    font: 17px/25px 'Georgia', serif;
     background: #F5F4EF 
     color: #000305;
     -webkit-text-size-adjust:100%;
@@ -70,7 +103,7 @@ article  {
 }
 
 h1, h2, h3, h4, h5, h6 { 
-    font-family: 'Vollkorn', 'Georgia', serif;
+    font-family: 'Georgia', serif;
     font-weight: normal; 
     color: #222; 
 }

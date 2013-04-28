@@ -4,53 +4,16 @@
  *  April 17, 2013
  */
 
-/* reset  */
-
-html, body, div, p, img, ul, ol,
-footer, header, section, h1, span, 
-time, hr, hgroup, a img, aside, nav, 
-form, input, article, h2, h3, h4, 
-label, textarea, small {
-    margin:0;
-    padding:0;
-    border:0;
-    outline:0;
-    font-size:100%;
-    vertical-align:baseline;
-    background:transparent;
-    text-decoration:none;
-    }
-footer, section, article, 
-header, aside, nav { 
-    display:block;
-    }
-:focus {
-    outline:none; 
-    }
-::-moz-selection, ::selection { 
-    color:#fff;
-    background:#c22a09; 
-    }
-
-h1, h2, h3, h4 {
-    font-weight: normal;
-    }
-
-/* end reset */   
-
-
 html {
     height:101%;
-    border-top:solid 4px #333;
    }
    
 body {
-   font-size:17px;
-   color:#111;
-   font-family: Georgia, serif;
-   font-weight:lighter;
-   -webkit-text-size-adjust:100%;
-   }
+    font: 17px/25px 'Palatino', 'Palatino Linotype', 'Georgia', serif;
+    background: #F5F4EF 
+    color: #000305;
+    -webkit-text-size-adjust:100%;
+    }
 
 /*  links */
 
@@ -65,16 +28,13 @@ a:hover, a:active {
 
 /* code */
 
-pre,
-code,
-kbd,
-samp {
-  font-family: monospace, serif;
-  _font-family: "courier new", monospace;
-  font-size: 1em; }
-
-small {
-  font-size: 75%; }
+code, pre { 
+    margin: 1.14286em 0 1.14286em 53px;
+    font-size: 0.95em; 
+    color: #000099; 
+    font-family: 'Consolas', 'Deja Vu Sans Mono', 
+    'Bitstream Vera Sans Mono', 'Monaco', 'Courier New', 'monospace';  
+    }
 
 /* lists */
 
@@ -85,52 +45,42 @@ ol, ul {
   list-style-position: outside;
 }
 
-ul {
-    font-size: 1.1em;
-    }
+ul { font-size: 1.1em; }
 
 /* images */
 
 img {
-  width:99.7%;
-  max-width:800px;
+  width:90%;
   border:solid 1px #eee;
   height:auto;
   }
 
 @media \0screen {
-  img { 
-  	width: auto; /* for ie 8 */
-        }
+  img { width: auto; } /* for ie 8 */
     }
 
 /* layout */
 
 article  {
-  width:90%;
-  max-width:560px;
-  overflow:auto;
-  padding:0 0 60px 0;
-  margin:0 auto;
-  }
+    width:90%;
+    max-width:700px;
+    overflow:auto;
+    padding:0 0 60px 0;
+    margin:0 auto;
+}
 
-h1, h2, h3, h4 {
-    Font-style: italic;
-    }
+h1, h2, h3, h4, h5, h6 { 
+    font-family: 'Vollkorn', 'Georgia', serif;
+    font-weight: normal; 
+    color: #222; 
+}
+h1, h2 { margin: 30px 0 25px 0; }
+h1 { font-size: 48px; line-height: 52px; }
+h1 a { text-decoration: none; }
+h2 { font-size: 36px; line-height: 40px; }
+h2 { font-size: 27px; line-height: 30px; }
+h2, h3, h4 { Font-style: italic; }
 
-h1 {
-   width:100%;
-   font-size:2.1em;
-   text-align:center;
-   padding:40px 0;
-  }
-    h1 a {
-        text-decoration: none;
-   }
-h2 {
-  font-size:1.5em;
-  margin:50px 0 30px 0;
-  }
 p {
   clear:both;
   font-size:1.1em;

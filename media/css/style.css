@@ -187,12 +187,13 @@ footer {
 @media only screen and (max-width: 767px) {
 
       body {
-       font-size:15px;
+       font-size:14px;
      }
     h1 {
       font-size:2.6em;
       padding-top:60px;
       padding-bottom:30px;
+      text-align: center;
       }
     h2 {
       width:100%;
@@ -223,7 +224,6 @@ footer {
     ul li, ol li {
       width: 100%;
     }
-    
     blockquote {
       margin: 1.5em 24px 1.5em 24px;
       padding-left: 9px; }

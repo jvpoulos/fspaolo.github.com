@@ -236,7 +236,7 @@ footer {
         margin-right: 0;
     }
     ul li, ol li {
-        width: 100%;
+        width: 50%;
         line-height: 10em;
     }
     blockquote {

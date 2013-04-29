@@ -200,7 +200,7 @@ footer {
     h1 {
         font-size:2.6em;
         padding-top:15px;
-        padding-bottom:30px;
+        padding-bottom:20px;
         text-align: center;
     }
     h2 {
@@ -244,7 +244,7 @@ footer {
         padding-left: 9px; 
     }
     #nav {
-        font-size: 0.9em;
+        font-size: 0.8em;
         letter-spacing: 1px;
         padding: 1px 12px;
     }

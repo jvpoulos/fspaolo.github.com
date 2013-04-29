@@ -237,13 +237,14 @@ footer {
     }
     ul li, ol li {
         width: 100%;
+        line-height: 1em;
     }
     blockquote {
         margin: 1.5em 24px 1.5em 24px;
         padding-left: 9px; 
     }
     #nav {
-        font-size: 0.8em;
+        font-size: 0.75em;
         letter-spacing: 1px;
         padding: 1px 12px;
     }

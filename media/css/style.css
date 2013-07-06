@@ -225,6 +225,10 @@ navigation {
         margin: 0 0 20px 0;
         word-wrap: break-word;
     }
+    p code {
+        font-size: 1.2em; 
+        margin: 0;
+    }
     code, pre {
         font-size: 1.3em;
         margin: 1em 0 1em 0;

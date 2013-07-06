@@ -22,7 +22,7 @@
         compatibility mode is within the first 1K bytes
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
-  <title>Grid computing with Apple's Xgrid (Desktop version)</title>
+  <title>Grid computing with Apple's Xgrid (desktop version)</title>
   <meta name="description" content="">
   <meta name="author" content="Fernando Paolo">
 
@@ -51,7 +51,7 @@
 
 <h1 class="title">
     <a href="/material/xgrid.html">
-        Grid computing with Apple's Xgrid (Desktop version)
+        Grid computing with Apple's Xgrid (desktop version)
     </a>
 </h1>
 
@@ -88,25 +88,25 @@
 <p>See <a href="http://docs.info.apple.com/article.html?path=ServerAdmin/10.6/en/xg3c6df80a.html">Managing an Xgrid Controller</a>.</p>
 <h2 id="the-xgrid-daemon-control-interface">The Xgrid Daemon Control&nbsp;Interface</h2>
 <p>Command&nbsp;line: </p>
-<div class="codehilite"><pre><span class="nv">$ </span>xgridctl
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">xgridctl</span>
 </pre></div>
 
 
 <p>Start the&nbsp;controller:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ssh username@remote.controller.edu
-<span class="nv">$ </span>sudo xgridctl c start
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">controller</span><span class="p">.</span><span class="n">edu</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">xgridctl</span> <span class="n">c</span> <span class="n">start</span>
 </pre></div>
 
 
 <p>Turn off an&nbsp;agent:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ssh username@remote.agent.edu
-<span class="nv">$ </span>sudo xgridctl a stop
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">agent</span><span class="p">.</span><span class="n">edu</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">xgridctl</span> <span class="n">a</span> <span class="n">stop</span>
 </pre></div>
 
 
 <p>More&nbsp;options:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>sudo xgridctl
-usage: xgridctl <span class="o">[</span>controller|agent<span class="o">]</span> status|start|stop|restart
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">sudo</span> <span class="n">xgridctl</span>
+<span class="nl">usage:</span> <span class="n">xgridctl</span> <span class="p">[</span><span class="n">controller</span><span class="o">|</span><span class="n">agent</span><span class="p">]</span> <span class="n">status</span><span class="o">|</span><span class="n">start</span><span class="o">|</span><span class="n">stop</span><span class="o">|</span><span class="n">restart</span>
 </pre></div>
 
 
@@ -114,30 +114,28 @@ usage: xgridctl <span class="o">[</span>controller|agent<span class="o">]</span>
 <p>Provides a summary of the activity of the grid. This software is part of Mac <span class="caps">OS</span> X <strong>Server</strong>. Download it for free from <a href="http://support.apple.com/downloads/">Apple&#8217;s website</a>.</p>
 <h2 id="a-hack-for-snow-leopard">A hack for Snow&nbsp;Leopard&#8230;</h2>
 <p>To have read/write permission on the agents in <code>/Volumes</code> we need <a href="http://docs.info.apple.com/article.html?path=Mac/10.6/en/8740.html">kerberos</a>. But it is only available on Mac <span class="caps">OS</span> X <strong>Server</strong>. Instead&#8230; one can simply change the configuration&nbsp;files:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>sudo cp /usr/share/sandbox/xgridagentd_task_nobody.sb  <span class="se">\</span>
-          /usr/share/sandbox/xgridagentd_task_nobody.sb.bak
+<div class="codehilite"><pre><span class="nv">$ </span>sudo cp /usr/share/sandbox/xgridagentd_task_nobody.sb /usr/share/sandbox/xgridagentd_task_nobody.sb.bak
 
-<span class="nv">$ </span>sudo cp /usr/share/sandbox/xgridagentd_task_somebody.sb  <span class="se">\ </span>
-          /usr/share/sandbox/xgridagentd_task_nobody.sb
+<span class="nv">$ </span>sudo cp /usr/share/sandbox/xgridagentd_task_somebody.sb /usr/share/sandbox/xgridagentd_task_nobody.sb
 </pre></div>
 
 
 <h2 id="the-xgrid-command-line-client-user">The xgrid command-line client&nbsp;(user)</h2>
 <p>Set the environmental variables (or add these to your <code>.bashrc</code>):</p>
-<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">export </span><span class="nv">XGRID_CONTROLLER_HOSTNAME</span><span class="o">=</span>hostname
-<span class="nv">$ </span><span class="nb">export </span><span class="nv">XGRID_CONTROLLER_PASSWORD</span><span class="o">=</span>password
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">export</span> <span class="n">XGRID_CONTROLLER_HOSTNAME</span><span class="o">=</span><span class="n">hostname</span>
+<span class="err">$</span> <span class="n">export</span> <span class="n">XGRID_CONTROLLER_PASSWORD</span><span class="o">=</span><span class="n">password</span>
 </pre></div>
 
 
 <p>Client submit jobs to the&nbsp;controller:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>xgrid -job submit /usr/bin/python -O test.py
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">xgrid</span> <span class="o">-</span><span class="n">job</span> <span class="n">submit</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python</span> <span class="o">-</span><span class="n">O</span> <span class="n">test</span><span class="p">.</span><span class="n">py</span>
 
-<span class="o">{</span><span class="nv">jobIdentifier</span> <span class="o">=</span> 231; <span class="o">}</span>
+<span class="p">{</span><span class="n">jobIdentifier</span> <span class="o">=</span> <span class="mi">231</span><span class="p">;</span> <span class="p">}</span>
 </pre></div>
 
 
 <p>Client queries the&nbsp;results:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>xgrid -job results -id 231
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">xgrid</span> <span class="o">-</span><span class="n">job</span> <span class="n">results</span> <span class="o">-</span><span class="n">id</span> <span class="mi">231</span>
 </pre></div>
 
 
@@ -169,17 +167,17 @@ The <strong>Working dir</strong> (if relative path): <code>/tmp/xgagent.bUDiNL4g
 </ul>
 <p>Note that the xgrid command line tool does not support &#8220;globbing&#8221; multiple files as argument (e.g. <code>*.ext</code>). For that purpose I&#8217;ve created the above&nbsp;scripts.</p>
 <p>To generate and submit a batch file with jobs that call a program <code>prog</code> with command line argument <code>arg</code> on several&nbsp;files:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>python xg-batch.py -s -j jobname -c <span class="s2">&quot;/path/to/prog -a arg&quot;</span> /path/to/files/*.ext
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">python</span> <span class="n">xg</span><span class="o">-</span><span class="n">batch</span><span class="p">.</span><span class="n">py</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="n">j</span> <span class="n">jobname</span> <span class="o">-</span><span class="n">c</span> <span class="s">&quot;/path/to/prog -a arg&quot;</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">files</span><span class="o">/*</span><span class="p">.</span><span class="n">ext</span>
 </pre></div>
 
 
 <p>To retrieve the results by passing the <span class="caps">ID</span> files (generated by <code>xg-batch.py</code>):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>python xg-result.py file1.id file2.id file3.id ...
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">python</span> <span class="n">xg</span><span class="o">-</span><span class="n">result</span><span class="p">.</span><span class="n">py</span> <span class="n">file1</span><span class="p">.</span><span class="n">id</span> <span class="n">file2</span><span class="p">.</span><span class="n">id</span> <span class="n">file3</span><span class="p">.</span><span class="n">id</span> <span class="p">...</span>
 </pre></div>
 
 
 <p>Or by passing the directory containing those&nbsp;files:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>python xg-result.py /path/to/directory
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">python</span> <span class="n">xg</span><span class="o">-</span><span class="n">result</span><span class="p">.</span><span class="n">py</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">directory</span>
 </pre></div>
 
 

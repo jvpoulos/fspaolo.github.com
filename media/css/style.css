@@ -141,11 +141,11 @@ h3 {
 }
 
 p {
-    clear:both;
-    font-size:1.1em;
-    line-height:1.6em;
-    word-spacing:1px;
-    margin:0 0 10px 0;
+    clear: both;
+    font-size: 1.1em;
+    line-height: 1.6em;
+    word-spacing: 1px;
+    margin: 0 0 10px 0;
 } 
 
 hr {
@@ -228,10 +228,10 @@ navigation {
     p {
         font-size: 1.3em;
         line-height: 1.5em;
-        margin: 0 0 20px 0;
+        margin: 0 0 10px 0;
     }
     p code {
-        font-size: 1em;
+        font-size: 2em;
         margin: 0;
     }
     hr {

@@ -209,7 +209,7 @@ navigation {
        font-size: 14px;
     }
     h1 {
-        font-size: 2.8em;
+        font-size: 3.8em;
         line-height: 1.15em;
         padding-top: 15px;
         padding-bottom: 15px;
@@ -228,7 +228,7 @@ navigation {
     p {
         font-size: 1.3em;
         line-height: 1.5em;
-        margin: 0 0 0 0;
+        margin: 0 0 10px 0;
     }
     code, pre {
         font-size: 1.3em;

@@ -125,12 +125,6 @@ h1 {
 h1 a { 
     text-decoration: none; 
 }
-/*
-h2 { 
-    font-size: 36px; 
-    line-height: 40px; 
-}
-*/
 h2, h3 { 
     font-size: 27px; 
     line-height: 30px; 
@@ -204,7 +198,7 @@ navigation {
     }
 }
 
-/* iphone (and other smartphones) */
+/* iphone (and other smartphones): portrait and landscape */
 
 @media only screen and (max-width: 767px) {
     body {
@@ -247,7 +241,7 @@ navigation {
     }
     ol, ul {
         list-style: square;
-        margin-left: 18px;
+        margin-left: 40px;
         margin-right: 0;
     }
     ul li, ol li {
@@ -265,7 +259,18 @@ navigation {
     }
 }
 
+/* iphone (and other smartphones): portrait only */
+
 @media (max-width: 320px) {
+    ol, ul {
+        list-style: square;
+        margin-left: 18px;
+        margin-right: 0;
+    }
+    blockquote {
+        margin: 1.5em 18px 1.5em 24px;
+        padding-left: 9px; 
+    }
 }
 
 @media (-webkit-min-device-pixel-ratio : 1.5) {

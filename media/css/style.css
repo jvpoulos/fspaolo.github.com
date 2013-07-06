@@ -206,7 +206,7 @@ navigation {
 
 @media only screen and (max-width: 767px) {
     body {
-       font-size: 14px;
+       font-size: 12px;
     }
     h1 {
         font-size: 2.8em;

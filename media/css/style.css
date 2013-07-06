@@ -211,7 +211,7 @@ navigation {
        font-size: 14px;
     }
     h1 {
-        font-size: 2.5em;
+        font-size: 2.4em;
         line-height: 1.15em;
         text-align: center;
         padding-top: 15px;
@@ -220,7 +220,7 @@ navigation {
     h2 {
         width: 100%;
         font-size: 1.8em;
-        line-height: 1.1em;
+        line-height: 1.2em;
     }
     article  {
         padding:0 0 40px 0;
@@ -246,6 +246,7 @@ navigation {
         font-size: 1.3em;
     }
     ol, ul {
+        list-style: square;
         margin-left: 18px;
         margin-right: 0;
     }

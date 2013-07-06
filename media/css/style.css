@@ -231,6 +231,7 @@ navigation {
         font-size: 1.3em;
         line-height: 1.5em;
         margin: 0 0 10px 0;
+        word-wrap: break-word;
     }
     code, pre {
         font-size: 1.3em;

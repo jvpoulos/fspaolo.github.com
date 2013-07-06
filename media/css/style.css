@@ -233,7 +233,7 @@ navigation {
     }
     code, pre {
         font-size: 1.3em;
-        margin: 1em 0 1em 40px;
+        margin: 1em 0 1em 0;
         word-wrap: break-word;
     }
     hr {

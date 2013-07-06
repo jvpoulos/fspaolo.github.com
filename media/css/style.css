@@ -62,11 +62,12 @@ a:hover, a:active {
 /* code */
 
 code, pre { 
-    margin: 1.14286em 0 1.14286em 40px;
-    font-size: 0.95em; 
-    color: #000099; 
     font-family: 'Consolas', 'Deja Vu Sans Mono', 
     'Bitstream Vera Sans Mono', 'Monaco', 'Courier New', 'monospace';  
+    font-size: 0.95em; 
+    color: #000099; 
+    margin: 1.14286em 0 1.14286em 40px;
+    word-wrap: break-word;
     }
 
 p code {
@@ -206,7 +207,7 @@ navigation {
 
 @media only screen and (max-width: 767px) {
     body {
-       font-size: 9px;
+       font-size: 14px;
     }
     h1 {
         font-size: 2.8em;
@@ -233,7 +234,7 @@ navigation {
     code, pre {
         font-size: 1.3em;
         margin: 1em 0 1em 40px;
-        overflow: auto;
+        word-wrap: break-word;
     }
     hr {
        margin:60px 0;

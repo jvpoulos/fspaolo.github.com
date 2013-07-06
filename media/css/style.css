@@ -230,7 +230,7 @@ navigation {
         line-height: 1.5em;
         margin: 0 0 10px 0;
     }
-    p code, p pre {
+    code, pre {
         font-size: 10em;
         margin: 0;
     }

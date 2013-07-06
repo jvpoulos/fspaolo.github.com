@@ -211,8 +211,9 @@ navigation {
        font-size: 14px;
     }
     h1 {
-        font-size: 3em;
+        font-size: 7.8em;
         line-height: 1.15em;
+        text-align: center;
         padding-top: 15px;
         padding-bottom: 15px;
     }
@@ -220,9 +221,6 @@ navigation {
         width: 100%;
         font-size: 1.8em;
         line-height: 1.3em;
-    }
-    h1 {
-        text-align: center;
     }
     article  {
         padding:0 0 40px 0;

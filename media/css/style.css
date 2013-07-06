@@ -62,7 +62,7 @@ a:hover, a:active {
 /* code */
 
 code, pre { 
-    margin: 1.14286em 0 1.14286em 53px;
+    margin: 1.14286em 0 1.14286em 40px;
     font-size: 0.95em; 
     color: #000099; 
     font-family: 'Consolas', 'Deja Vu Sans Mono', 
@@ -70,13 +70,14 @@ code, pre {
     }
 
 p code {
+    font-size: 0.85em; 
     margin: 0;
 }
 
 /* lists */
 
 ol, ul {
-    margin: 1.14286em 0 1.14286em 53px;
+    margin: 1.14286em 0 1.14286em 40px; /* orig: 53px */
     line-height:1.6em;
     padding-left: 22px;
     list-style-position: outside;
@@ -123,16 +124,20 @@ h1 {
 h1 a { 
     text-decoration: none; 
 }
+/*
 h2 { 
     font-size: 36px; 
     line-height: 40px; 
 }
-h2 { 
+*/
+h2, h3 { 
     font-size: 27px; 
     line-height: 30px; 
+    margin-top: 50px;
 }
-h2, h3, h4 { 
-    Font-style: italic; 
+
+h3 {
+    font-style: italic;
 }
 
 p {
@@ -140,7 +145,7 @@ p {
     font-size:1.1em;
     line-height:1.6em;
     word-spacing:1px;
-    margin:0 0 30px 0;
+    margin:0 0 10px 0;
 } 
 
 hr {
@@ -222,11 +227,12 @@ navigation {
         padding:0 0 40px 0;
     }
     p {
-        font-size:1.3em;
-        line-height:1.5em;
-        margin:0 0 20px 0;
+        font-size: 1.3em;
+        line-height: 1.5em;
+        margin: 0 0 20px 0;
     }
     p code {
+        font-size: 1em;
         margin: 0;
     }
     hr {

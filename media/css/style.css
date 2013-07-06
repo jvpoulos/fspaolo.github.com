@@ -134,7 +134,7 @@ h2 {
 h2, h3 { 
     font-size: 27px; 
     line-height: 30px; 
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 h3 {
@@ -146,7 +146,7 @@ p {
     font-size: 1.1em;
     line-height: 1.6em;
     word-spacing: 1px;
-    margin: 0 0 5px 0;
+    margin: 0 0 20px 0;
     word-wrap: break-word;
 } 
 
@@ -230,7 +230,7 @@ navigation {
     p {
         font-size: 1.3em;
         line-height: 1.5em;
-        margin: 0 0 10px 0;
+        margin: 0 0 20px 0;
         word-wrap: break-word;
     }
     code, pre {
@@ -248,7 +248,7 @@ navigation {
         font-size: 1.3em;
     }
     ol, ul {
-        margin-left: 20px;
+        margin-left: 18px;
         margin-right: 0;
     }
     ul li, ol li {
@@ -256,7 +256,7 @@ navigation {
         margin: 0;
     }
     blockquote {
-        margin: 1.5em 24px 1.5em 24px;
+        margin: 1.5em 18px 1.5em 24px;
         padding-left: 9px; 
     }
     #nav {

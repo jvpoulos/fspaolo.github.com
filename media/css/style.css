@@ -247,8 +247,8 @@ navigation {
     ul {
         font-size: 1.3em;
     }
-    ol, ul, code, pre {
-        margin-left: 24px;
+    ol, ul {
+        margin-left: 20px;
         margin-right: 0;
     }
     ul li, ol li {

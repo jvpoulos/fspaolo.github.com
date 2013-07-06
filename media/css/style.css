@@ -241,16 +241,11 @@ navigation {
     }
     ol, ul {
         list-style: square;
-        margin-left: 40px;
         margin-right: 0;
     }
     ul li, ol li {
         width: 100%;
         margin: 0;
-    }
-    blockquote {
-        margin: 1.5em 18px 1.5em 24px;
-        padding-left: 9px; 
     }
     #nav {
         font-size: 0.8em;

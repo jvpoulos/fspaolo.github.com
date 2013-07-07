@@ -75,69 +75,69 @@
 <h2 id="ssh-certificate"><span class="caps">SSH</span>&nbsp;certificate</h2>
 <p>Generate <span class="caps">SSH</span> keys for using a <span class="caps">SSH</span> connection without having to enter the password every time you log&nbsp;in.</p>
 <p>1) Generate the key (<em>local machine</em>):</p>
-<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
-<span class="nv">$ </span>ssh-keygen -t rsa -C <span class="s2">&quot;username@youremail.com&quot;</span>
-<span class="nv">$ </span>chmod 700 id_rsa
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">cd</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span>
+<span class="err">$</span> <span class="n">ssh</span><span class="o">-</span><span class="n">keygen</span> <span class="o">-</span><span class="n">t</span> <span class="n">rsa</span> <span class="o">-</span><span class="n">C</span> <span class="s">&quot;username@youremail.com&quot;</span>
+<span class="err">$</span> <span class="n">chmod</span> <span class="mi">700</span> <span class="n">id_rsa</span>
 </pre></div>
 
 
 <p>if <code>.ssh</code> does not exist create it: <code>mkdir ~/.ssh</code>. <code>ssh-keygen</code> will create two files with the <em>private</em> and <em>public</em> keys: <code>id_rsa</code> and <code>id_rsa.pub</code>. <strong>Skip this step if you have already the keys in your&nbsp;machine!</strong></p>
 <p>2) Log on the remote host (<em>remote machine</em>):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ssh username@remote.host.edu
-<span class="nv">$ </span><span class="nb">cd</span> ~/.ssh
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">host</span><span class="p">.</span><span class="n">edu</span>
+<span class="err">$</span> <span class="n">cd</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span>
 </pre></div>
 
 
 <p>if <code>.ssh</code> does not exist create it: <code>mkdir ~/.ssh</code>. </p>
 <p>3) Copy your <em>public</em> key (<em>local machine</em>):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>cat ~/.ssh/id_rsa.pub | pbcopy
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">cat</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span><span class="p">.</span><span class="n">pub</span> <span class="o">|</span> <span class="n">pbcopy</span>
 </pre></div>
 
 
 <p><code>pbcopy</code> will copy the content to the <a href="http://en.wikipedia.org/wiki/Clipboard_(software)">Clipboard</a>.</p>
 <p>4) Add the <em>public</em> key to the remote host (<em>remote machine</em>):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>pbpaste &gt; ~/.ssh/authorized_keys       <span class="c"># to create the file</span>
-<span class="nv">$ </span>chmod 644 authorized_keys
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">pbpaste</span> <span class="o">&gt;</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">authorized_keys</span>       <span class="err">#</span> <span class="n">to</span> <span class="n">create</span> <span class="n">the</span> <span class="n">file</span>
+<span class="err">$</span> <span class="n">chmod</span> <span class="mi">644</span> <span class="n">authorized_keys</span>
 </pre></div>
 
 
 <p><code>pbpaste</code> will paste the content from the <a href="http://en.wikipedia.org/wiki/Clipboard_(software)">Clipboard</a>.</p>
 <p>Log on the remote machine without entering the password. If necessary, give the path to your <em>private</em> key (commonly <em>not needed</em>!):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ssh -i ~/.ssh/id_rsa username@remote.host.edu
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">i</span> <span class="o">~/</span><span class="p">.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">host</span><span class="p">.</span><span class="n">edu</span>
 </pre></div>
 
 
 <p>Read more <a href="http://help.github.com/mac-key-setup/">about <span class="caps">SSH</span> keys</a>.</p>
 <h2 id="restartshutdown-the-computer">Restart/Shutdown the&nbsp;computer</h2>
 <p>Restart a <strong>local</strong> computer&nbsp;immediately:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>sudo shutdown -r now
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">sudo</span> <span class="n">shutdown</span> <span class="o">-</span><span class="n">r</span> <span class="n">now</span>
 </pre></div>
 
 
 <p>Restart a <strong>remote</strong> computer at a specific&nbsp;time:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ssh -l root computer shutdown -r hhmm
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">l</span> <span class="n">root</span> <span class="n">computer</span> <span class="n">shutdown</span> <span class="o">-</span><span class="n">r</span> <span class="n">hhmm</span>
 </pre></div>
 
 
 <p>Shut down a <strong>remote</strong> computer in 30&nbsp;minutes:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ssh -l root computer shutdown -h +30
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">l</span> <span class="n">root</span> <span class="n">computer</span> <span class="n">shutdown</span> <span class="o">-</span><span class="n">h</span> <span class="o">+</span><span class="mi">30</span>
 </pre></div>
 
 
 <h2 id="job-control">Job&nbsp;control</h2>
 <p>A job (or process) is defined as an &#8220;instance&#8221; of an executing&nbsp;program.</p>
 <p>List the jobs in your job&nbsp;table:</p>
-<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">jobs</span>
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">jobs</span>
 </pre></div>
 
 
 <p>Kill job number [2] on the&nbsp;list:</p>
-<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">kill</span> %2
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">kill</span> <span class="o">%</span><span class="mi">2</span>
 </pre></div>
 
 
 <p>Display information about <em>your</em> processes&nbsp;running:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ps
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ps</span>
 </pre></div>
 
 
@@ -149,7 +149,7 @@
 
 
 <p>Kill process by <span class="caps">PID</span>&nbsp;number:</p>
-<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">kill </span>3682
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">kill</span> <span class="mi">3682</span>
 </pre></div>
 
 
@@ -160,24 +160,24 @@
 
 <p>list the jobs (using <code>jobs</code>) and kill the <em>stopped jobs</em> or bring them to the <em>foreground</em> (see bellow), or simply type: <code>logout logout</code> (yes,&nbsp;twice). </p>
 <p>Run a job in the <em>background</em> with <code>&amp;</code>:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>nohup commands <span class="amp">&amp;</span>
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">nohup</span> <span class="n">commands</span> <span class="o">&amp;</span>
 </pre></div>
 
 
 <p><a href="http://en.wikipedia.org/wiki/Nohup">nohup</a> enables the command to keep running after the user has logged out. The output that would normally go to the terminal goes to a file called <code>nohup.out</code> if it has not already been redirected (e.g., <code>&gt; file.out</code>).</p>
 <p>Bring a <em>background</em> (or <em>stopped</em>) job to the <em>foreground</em>:</p>
-<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">fg</span> %jobnumber
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">fg</span> <span class="o">%</span><span class="n">jobnumber</span>
 </pre></div>
 
 
 <p>Place a <em>foreground</em> job in the <em>background</em> (to free the&nbsp;terminal):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>^Z    <span class="c"># type Control-z to suspend de job</span>
-<span class="nv">$ </span><span class="nb">bg</span>
+<div class="codehilite"><pre><span class="err">$</span> <span class="o">^</span><span class="n">Z</span>    <span class="err">#</span> <span class="n">type</span> <span class="n">Control</span><span class="o">-</span><span class="n">z</span> <span class="n">to</span> <span class="n">suspend</span> <span class="n">de</span> <span class="n">job</span>
+<span class="err">$</span> <span class="n">bg</span>
 </pre></div>
 
 
 <p>Monitor (in &#8220;real time&#8221;) the main processes running and information about system/hardware usage (e.g., <span class="caps">CPU</span>, memory, network,&nbsp;etc.):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>top
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">top</span>
 </pre></div>
 
 
@@ -186,22 +186,22 @@
 <p><a href="http://en.wikipedia.org/wiki/Secure_copy">scp</a> is an application to copy files to, from, or between different hosts. It uses <a href="http://en.wikipedia.org/wiki/Secure_Shell"><span class="caps">SSH</span></a> for data transfer and provides the same authentication and same level of security as <a href="http://en.wikipedia.org/wiki/Secure_Shell"><span class="caps">SSH</span></a>.</p>
 <p><a href="http://en.wikipedia.org/wiki/Rsync">rsync</a> is an application to analyse files and only copy the changes made to files rather than all files. See option bellow for <a href="http://en.wikipedia.org/wiki/Secure_Shell"><span class="caps">SSH</span></a> transfer protocol. The rest, similar syntax as <a href="http://en.wikipedia.org/wiki/Secure_copy">scp</a>. </p>
 <p>Copy file from <strong>remote</strong> host to <strong>local</strong>&nbsp;host:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>scp username@remote.host.edu:/remote/file.ext /local/directory
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">scp</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">host</span><span class="p">.</span><span class="n">edu</span><span class="o">:/</span><span class="n">remote</span><span class="o">/</span><span class="n">file</span><span class="p">.</span><span class="n">ext</span> <span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">directory</span>
 </pre></div>
 
 
 <p>Copy file from <strong>local</strong> host to <strong>remote</strong>&nbsp;host:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>scp file.ext username@remote.host.edu:/remote/directory
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">scp</span> <span class="n">file</span><span class="p">.</span><span class="n">ext</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">host</span><span class="p">.</span><span class="n">edu</span><span class="o">:/</span><span class="n">remote</span><span class="o">/</span><span class="n">directory</span>
 </pre></div>
 
 
 <p>Copy file from <strong>remote</strong> host1 to <strong>remote</strong>&nbsp;host2:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>scp username@remote.host1.edu:/remote/file.ext username@remote.host2.edu:/remote/directory
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">scp</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">host1</span><span class="p">.</span><span class="n">edu</span><span class="o">:/</span><span class="n">remote</span><span class="o">/</span><span class="n">file</span><span class="p">.</span><span class="n">ext</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">host2</span><span class="p">.</span><span class="n">edu</span><span class="o">:/</span><span class="n">remote</span><span class="o">/</span><span class="n">directory</span>
 </pre></div>
 
 
 <p>Copy multiple files from <strong>local</strong> host to <strong>remote</strong>&nbsp;host:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>scp file1.ext file2.ext files3.ext username@remote.host.edu:/remote/directory
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">scp</span> <span class="n">file1</span><span class="p">.</span><span class="n">ext</span> <span class="n">file2</span><span class="p">.</span><span class="n">ext</span> <span class="n">files3</span><span class="p">.</span><span class="n">ext</span> <span class="n">username</span><span class="err">@</span><span class="n">remote</span><span class="p">.</span><span class="n">host</span><span class="p">.</span><span class="n">edu</span><span class="o">:/</span><span class="n">remote</span><span class="o">/</span><span class="n">directory</span>
 </pre></div>
 
 
@@ -226,97 +226,94 @@
 <p><em>Interactive</em></p>
 <p><a href="http://linux.about.com/od/commands/l/blcmdl1_ftp.htm">ftp</a> is an application (client) to transfer files between computers connected via the <a href="http://en.wikipedia.org/wiki/File_Transfer_Protocol">File Transfer Protocol</a>&nbsp;(<span class="caps">FTP</span>).</p>
 <p>Connect to the remote&nbsp;host:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>ftp remote.host.edu
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">ftp</span> <span class="n">remote</span><span class="p">.</span><span class="n">host</span><span class="p">.</span><span class="n">edu</span>
 </pre></div>
 
 
 <p>For a public <span class="caps">FTP</span>&nbsp;use</p>
-<div class="codehilite"><pre>user: username@youremail.com
-password: anonymous
+<div class="codehilite"><pre><span class="n">user</span><span class="o">:</span> <span class="n">username</span><span class="err">@</span><span class="n">youremail</span><span class="o">.</span><span class="na">com</span>
+<span class="n">password</span><span class="o">:</span> <span class="n">anonymous</span>
 </pre></div>
 
 
 <p>Change dir and see&nbsp;content:</p>
-<div class="codehilite"><pre><span class="nv">$ </span><span class="nb">cd </span>dirname
-<span class="nv">$ </span>ls
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">cd</span> <span class="n">dirname</span>
+<span class="err">$</span> <span class="n">ls</span>
 </pre></div>
 
 
 <p>Copy file from <strong>remote</strong> host to <strong>local</strong> host (initial local&nbsp;dir):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>get remotefile.ext
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">get</span> <span class="n">remotefile</span><span class="p">.</span><span class="n">ext</span>
 </pre></div>
 
 
 <p>Copy file from <strong>local</strong> host (initial local dir) to <strong>remote</strong>&nbsp;host:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>put localfile.ext
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">put</span> <span class="n">localfile</span><span class="p">.</span><span class="n">ext</span>
 </pre></div>
 
 
 <p>Copy multiple files (to/from initial local&nbsp;dir):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>mget *.ext
-<span class="nv">$ </span>mput *.ext
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">mget</span> <span class="o">*</span><span class="p">.</span><span class="n">ext</span>
+<span class="err">$</span> <span class="n">mput</span> <span class="o">*</span><span class="p">.</span><span class="n">ext</span>
 </pre></div>
 
 
 <p>For not answering (Y/N) type: <code>prompt off</code>.</p>
 <p>Close the&nbsp;connection:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>quit
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">quit</span>
 </pre></div>
 
 
 <p><em>Non-interactive</em></p>
 <p>For <em>non-interactive download</em> you can use <a href="http://en.wikipedia.org/wiki/Wget">wget</a> or <a href="http://en.wikipedia.org/wiki/CURL">curl</a>.</p>
 <p>List&nbsp;directory:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>wget ftp://ftp.host.name.edu/pub/directory/    <span class="c"># this will generate an index.html file</span>
-<span class="nv">$ </span>open index.html                                <span class="c"># whole directory structure listing</span>
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">wget</span> <span class="n">ftp</span><span class="o">:</span><span class="c1">//ftp.host.name.edu/pub/directory/    # this will generate an index.html file</span>
+<span class="err">$</span> <span class="n">open</span> <span class="n">index</span><span class="p">.</span><span class="n">html</span>                                <span class="err">#</span> <span class="n">whole</span> <span class="n">directory</span> <span class="n">structure</span> <span class="n">listing</span>
 </pre></div>
 
 
 <p>or</p>
-<div class="codehilite"><pre><span class="nv">$ </span>curl ftp://ftp.host.name.edu/pub/directory/
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">curl</span> <span class="n">ftp</span><span class="o">:</span><span class="c1">//ftp.host.name.edu/pub/directory/</span>
 </pre></div>
 
 
 <p>Put the trailing slashes on&nbsp;directories.</p>
 <p>Get&nbsp;files:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>wget ftp://ftp.host.name.edu/pub/directory/*.ext
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">wget</span> <span class="n">ftp</span><span class="o">:</span><span class="c1">//ftp.host.name.edu/pub/directory/*.ext</span>
 </pre></div>
 
 
 <p>or </p>
-<div class="codehilite"><pre><span class="nv">$ </span>curl ftp://ftp.host.name.edu/pub/directory/file.ext -O    <span class="c"># no globbing</span>
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">curl</span> <span class="n">ftp</span><span class="o">:</span><span class="c1">//ftp.host.name.edu/pub/directory/file.ext -O    # no globbing</span>
 </pre></div>
 
 
 <p>Some <a href="http://en.wikipedia.org/wiki/Wget">wget</a>&nbsp;options:</p>
-<div class="codehilite"><pre>--ftp-user<span class="o">=</span>user  Specifies the username.
---ftp-password<span class="o">=</span>password  Specifies the password.
--r  Recursive download.
--m  Keep a mirror of a directory <span class="o">(</span>-r -N -l<span class="o">)</span>.
--c  Resume getting a partially-downloaded file.
--A  Comma-separated list of accepted extensions.
--R  Comma-separated list of rejected extensions.
+<div class="codehilite"><pre><span class="o">--</span><span class="n">ftp</span><span class="o">-</span><span class="n">user</span><span class="o">=</span><span class="n">user</span>  <span class="n">Specifies</span> <span class="n">the</span> <span class="n">username</span><span class="p">.</span>
+<span class="o">--</span><span class="n">ftp</span><span class="o">-</span><span class="n">password</span><span class="o">=</span><span class="n">password</span>  <span class="n">Specifies</span> <span class="n">the</span> <span class="n">password</span><span class="p">.</span>
+<span class="o">-</span><span class="n">r</span>  <span class="n">Recursive</span> <span class="n">download</span><span class="p">.</span>
+<span class="o">-</span><span class="n">m</span>  <span class="n">Keep</span> <span class="n">a</span> <span class="n">mirror</span> <span class="n">of</span> <span class="n">a</span> <span class="n">directory</span> <span class="p">(</span><span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">N</span> <span class="o">-</span><span class="n">l</span><span class="p">).</span>
+<span class="o">-</span><span class="n">c</span>  <span class="n">Resume</span> <span class="n">getting</span> <span class="n">a</span> <span class="n">partially</span><span class="o">-</span><span class="n">downloaded</span> <span class="n">file</span><span class="p">.</span>
+<span class="o">-</span><span class="n">A</span>  <span class="n">Comma</span><span class="o">-</span><span class="n">separated</span> <span class="n">list</span> <span class="n">of</span> <span class="n">accepted</span> <span class="n">extensions</span><span class="p">.</span>
+<span class="o">-</span><span class="n">R</span>  <span class="n">Comma</span><span class="o">-</span><span class="n">separated</span> <span class="n">list</span> <span class="n">of</span> <span class="n">rejected</span> <span class="n">extensions</span><span class="p">.</span>
 </pre></div>
 
 
 <p>Some <a href="http://en.wikipedia.org/wiki/CURL">curl</a>&nbsp;options:</p>
-<div class="codehilite"><pre>--user username:password  Specify user and password.
+<div class="codehilite"><pre><span class="o">--</span><span class="n">user</span> <span class="n">username</span><span class="o">:</span><span class="n">password</span>  <span class="n">Specify</span> <span class="n">user</span> <span class="n">and</span> <span class="n">password</span><span class="p">.</span>
 </pre></div>
 
 
 <p>This is&nbsp;non-recursive!</p>
 <h2 id="file-transfer-via-http">File transfer via&nbsp;<span class="caps">HTTP</span></h2>
 <p>Download a <em>whole</em> website keeping the original structure&nbsp;(mirror):</p>
-<div class="codehilite"><pre><span class="nv">$ </span>wget -m http://www.website.com/
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">wget</span> <span class="o">-</span><span class="n">m</span> <span class="n">http</span><span class="o">:</span><span class="c1">//www.website.com/</span>
 </pre></div>
 
 
 <p>Download recursively <em>all</em> <code>.html</code> files from a website&nbsp;directory:</p>
-<div class="codehilite"><pre><span class="nv">$ </span>wget -r -A.html http://www.website.com/directory/
+<div class="codehilite"><pre><span class="err">$</span> <span class="n">wget</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">A</span><span class="p">.</span><span class="n">html</span> <span class="n">http</span><span class="o">:</span><span class="c1">//www.website.com/directory/</span>
 </pre></div>
-
-
-<p><strong>Still working on this&nbsp;page&#8230;</strong></p>
 </article>          </section>
 
           <footer>

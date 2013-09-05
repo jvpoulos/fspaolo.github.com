@@ -186,7 +186,9 @@ footer {
 navigation {
     display: block;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    text-transform: lowercase;
+    font-variant: small-caps;
     padding-bottom: 50px;
 }
 

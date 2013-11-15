@@ -276,7 +276,7 @@ navigation {
         margin-right: 0;
     }
     img[alt=my_photo] { 
-        width: 90%; 
+        width: 100%; 
     }
     blockquote {
         margin: 1.5em 18px 1.5em 24px;

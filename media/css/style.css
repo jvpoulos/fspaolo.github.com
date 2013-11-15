@@ -95,7 +95,9 @@ img {
     border:solid 1px #eee;
     height:auto;
 }
-img[alt=my_photo] { width: 70%; }
+img[alt=my_photo] { 
+    width: 70%; 
+}
 
 @media \0screen {
     img { width: auto; } /* for ie 8 */
@@ -242,6 +244,9 @@ navigation {
        margin:60px 0;
     }  
     img { 
+        width: 100%; 
+    }
+    img[alt=my_photo] { 
         width: 100%; 
     }
     ul {

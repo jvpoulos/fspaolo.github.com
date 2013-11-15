@@ -247,7 +247,7 @@ navigation {
         width: 100%; 
     }
     img[alt=my_photo] { 
-        width: 100%; 
+        width: 70%; 
     }
     ul {
         font-size: 1.3em;
@@ -274,6 +274,9 @@ navigation {
         list-style: square;
         margin-left: 18px;
         margin-right: 0;
+    }
+    img[alt=my_photo] { 
+        width: 90%; 
     }
     blockquote {
         margin: 1.5em 18px 1.5em 24px;

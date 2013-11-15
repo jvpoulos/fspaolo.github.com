@@ -95,6 +95,7 @@ img {
     border:solid 1px #eee;
     height:auto;
 }
+img[alt=my_photo] { width: 70%; }
 
 @media \0screen {
     img { width: auto; } /* for ie 8 */

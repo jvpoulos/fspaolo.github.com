@@ -22,7 +22,7 @@
         compatibility mode is within the first 1K bytes
         code.google.com/p/chromium/issues/detail?id=23003 -->
 
-  <title>Parallel&nbsp;K-Means Clustering</title>
+  <title>Parallel&nbsp;k-Means Clustering</title>
   <meta name="description" content="">
   <meta name="author" content="Fernando Paolo">
 
@@ -51,7 +51,7 @@
 
 <h1 class="title">
     <a href="/material/kmeans-parallel.html">
-        CS267 Assignment 0: Parallel <i>K</i>-Means Clustering
+        CS267 Assignment 0: Parallel <p><i>k</i>-Means Clustering
     </a>
 </h1>
 
@@ -64,8 +64,8 @@
 <div class="toc">
 <ul>
 <li><a href="#bio">Bio</a></li>
-<li><a href="#kmeans"><i>K</i>-Means&nbsp;Clustering</a></li>
-<li><a href="#parallel">Parallelizing&nbsp;<i>K</i>-Means</a></li>
+<li><a href="#kmeans"><p><i>k</i>-Means&nbsp;Clustering</a></li>
+<li><a href="#parallel">Parallelizing&nbsp;<p><i>k</i>-Means</a></li>
 <li><a href="#assessment">Assessment</a></li>
 </ul>
 </div>
@@ -76,58 +76,22 @@
 <p>I'm taking CS267 to satisfy requirements
 for the Designated Emphasis in <a href="http://citris-uc.org/decse-organization/">Computational Science and Engineering</a>, to improve my (non-parallel) programming skills, and to learn how to implement machine learning algorithms faster and more efficiently. </p>
 
-<h2 id="kmeans"><i>K</i>-Means&nbsp;Clustering</h2>
-<p>Build and&nbsp;install</p>
-<div class="codehilite"><pre><span class="err">$</span> <span class="n">module</span> <span class="n">purge</span>
-<span class="err">$</span> <span class="n">module</span> <span class="n">load</span> <span class="n">intel</span> <span class="n">openmpi_mx</span>
-<span class="err">$</span> <span class="n">cd</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">mpi4py</span><span class="o">&gt;</span>
-<span class="err">$</span> <span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">build</span>
-<span class="err">$</span> <span class="n">python</span> <span class="n">setup</span><span class="p">.</span><span class="n">py</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span>
-</pre></div>
+<h2 id="kmeans"><p><i>k</i>-Means&nbsp;Clustering</h2>
+
+<p><i>k</i>-means clustering is a method for finding clusters and cluster centers in unlabeled data. The goal is to choose <i>k</i> cluster centers to minimize the total squared distance between each data point and its closest center. Given randomly chosen <i>k</i> initial centers, the <b>k-means</b> algorithm alternates between two steps until convergence: (<i>assignment step</i>) for each center, find subset of points or "cluster" that is closer to any other center; (<i>update step</i>) for each cluster, compute means of each feature, and update cluster center to reflect mean vector.</p>
+
+<p>
+<b>k-means</b> is NP-hard, and can be solved in time <img class="mwe-math-fallback-image-inline tex" alt="O(n^{dk+1}\log{n})" src="//upload.wikimedia.org/math/4/a/7/4a7ed560f313f45e361dcf2f2846d1ca.png">, where <i>n</i> is the number of points in <i>d</i> dimensions. 
+</p>
+
+<h2 id="parallel">Parallelizing&nbsp;<p><i>k</i>-Means</h2>
 
 
-<p>I think the problem has more to do with enthought python + netcdf was build with intel compilers (or at least I think, when I tried to run some tests earlier without the intel module loaded it came back with errors of not finding libimf.so - specific to intel). So trying to mix gcc+openmpi + intel+netcdf caused the&nbsp;crashes.</p>
-<p>[https://lists.sdsc.edu/pipermail/triton-discuss/2009-July/000184.html]</p>
-<p>To run code set <code>.bashrc</code>:</p>
-<div class="codehilite"><pre><span class="cp"># Portland is default on Triton</span>
-<span class="n">module</span> <span class="n">unload</span> <span class="n">pgi</span>
-<span class="n">module</span> <span class="n">load</span> <span class="n">intel</span> <span class="n">openmpi_mx</span>
-</pre></div>
-
-
-<p>And&nbsp;check:</p>
-<div class="codehilite"><pre><span class="err">$</span> <span class="n">source</span> <span class="o">~/</span><span class="p">.</span><span class="n">bashrc</span>
-<span class="err">$</span> <span class="n">module</span> <span class="n">list</span>
-<span class="n">Currently</span> <span class="n">Loaded</span> <span class="n">Modulefiles</span><span class="o">:</span>
-  <span class="mi">1</span><span class="p">)</span> <span class="n">intel</span><span class="o">/</span><span class="mf">11.1</span>         <span class="mi">2</span><span class="p">)</span> <span class="n">openmpi_mx</span><span class="o">/</span><span class="mf">1.4.1</span>
-</pre></div>
-
-
-<p>General info and examples:&nbsp;[http://engineering.ucsb.edu/~stefan/cs240-notes.html]</p>
-
-<h2 id="parallel">Parallelizing&nbsp;<i>K</i>-Means</h2>
-<p>Install with Intel&nbsp;compiler.</p>
-<p>Download the script <code>install_gmt.sh</code> from:&nbsp;[http://gmt.soest.hawaii.edu/gmt/install_gmt.sh]</p>
-<p>Set path to <code>netcdf/include</code>: </p>
-<div class="codehilite"><pre><span class="n">export</span> <span class="n"><span class="caps">CPPFLAGS</span></span><span class="o">=</span><span class="s">&quot;-I/opt/netcdf/4.0.1/intel/include&quot;</span>
-</pre></div>
-
-
-<p>Set path to <code>netcdf/lib</code>:</p>
-<div class="codehilite"><pre><span class="n">export</span> <span class="n"><span class="caps">LDFLAGS</span></span><span class="o">=</span><span class="s">&quot;-L/opt/netcdf/4.0.1/intel/lib&quot;</span>
-</pre></div>
-
-
-<p>Set compiler to&nbsp;intel:</p>
-<div class="codehilite"><pre><span class="n">export</span> <span class="n"><span class="caps">CC</span></span><span class="o">=</span><span class="err">”</span><span class="n">icc</span><span class="err">”</span>
-</pre></div>
-
-
-<p>Install (interactively create the <code>GMT4param.txt</code>):</p>
-<div class="codehilite"><pre><span class="err">$</span> <span class="n">sh</span> <span class="n">install_gmt</span><span class="p">.</span><span class="n">sh</span>
-</pre></div>
 
 <h2 id="assessment">Assessment</h2>
+
+
+
 </article>          </section>
 
 <!--          <footer>-->

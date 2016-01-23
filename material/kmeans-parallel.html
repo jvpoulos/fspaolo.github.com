@@ -51,7 +51,7 @@
 
 <h1 class="title">
     <a href="/material/kmeans-parallel.html">
-        CS267 Assignment 0: Parallel <p><i>k</i>-Means Clustering
+        CS267 Assignment 0: Parallel <i>k</i>-Means Clustering
     </a>
 </h1>
 
@@ -76,12 +76,12 @@
 <p>I'm taking CS267 to satisfy requirements
 for the Designated Emphasis in <a href="http://citris-uc.org/decse-organization/">Computational Science and Engineering</a>, to improve my (non-parallel) programming skills, and to learn how to implement machine learning algorithms faster and more efficiently. </p>
 
-<h2 id="kmeans"><i>k</i>-means&nbsp;Clustering</h2>
+<h2 id="kmeans"><i>k</i>-means&nbsp;clustering</h2>
 
 <p><i>k</i>-means clustering is a method for finding clusters and cluster centers in unlabeled data. The goal is to choose <i>k</i> cluster centers to minimize the total squared distance between each data point and its closest center. Given randomly chosen <i>k</i> initial centers, the <b>k-means</b> algorithm alternates between two steps until convergence: (<i>assignment step</i>) for each center, find subset of points or "cluster" that is closer to any other center; (<i>update step</i>) for each cluster, compute means of each feature, and update cluster center to reflect mean vector.</p>
 
 <p>
-<b>k-means</b> is NP-hard, and can be solved in time <img class="mwe-math-fallback-image-inline tex" alt="O(n^{dk+1}\log{n})" src="//upload.wikimedia.org/math/4/a/7/4a7ed560f313f45e361dcf2f2846d1ca.png">, where <i>n</i> is the number of points in <i>d</i> dimensions.
+<b>k-means</b> is NP-hard, and can be solved in time <img class="mwe-math-fallback-image-inline tex" alt="O(n^{dk+1}\log{n})" src="//mathurl.com/hg9fy9z">, where <i>n</i> is the number of points in <i>d</i> dimensions.
 </p>
 
 <h2 id="parallel">Parallelizing&nbsp;<i>k</i>-means</h2>

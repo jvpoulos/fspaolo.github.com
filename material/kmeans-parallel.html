@@ -99,6 +99,10 @@ The researchers run experiments comparing <b>k-means||</b> against sequential an
 Performance is evaluated on two dimensions -- clustering cost and running time -- for different values of <i>k</i>. For the largest data set (<i>n</i> = 4.8M and <i>d</i>=42), <b>k-means||</b> outperforms the paralleized version of <b>k-means</b> by orders of magnitude in terms of cost. <b>k-means||</b> runs about five times faster than the parallelized version of <b>k-means</b>. Unfortunately, the experiments do not compare the algorithms in terms of the memory which is needed for the computation.
 </p>
 
+<p>
+The main weakness of the study is that the experiments do not compare the algorithms in terms of the memory which is needed for the computation. However, I suspect that <b>k-means||</b> would outperform in terms of space complexity since <i>O</i>(log <i>n</i>) passes are not needed to find an optimal solution; the researchers find a solution as least as good as that of <b>k-means</b> in as little as five rounds. 
+</p>
+
 </article>          </section>
 
 <!--          <footer>-->

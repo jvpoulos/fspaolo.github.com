@@ -64,8 +64,8 @@
 <div class="toc">
 <ul>
 <li><a href="#bio">Bio</a></li>
-<li><a href="#kmeans"><i>k</i>-means&nbsp;clustering</a></li>
-<li><a href="#parallel">Parallelizing&nbsp;<i>k</i>-means</a></li>
+<li><a href="#kmeans"><i><b>k-means</b>&nbsp;and&nbsp;<b>k-means++</b></a></li>
+<li><a href="#parallel">Scalable <b>k-means++</b></a></li>
 <li><a href="#assessment">Assessment</a></li>
 </ul>
 </div>
@@ -76,17 +76,20 @@
 <p>I'm taking CS267 to satisfy requirements
 for the Designated Emphasis in <a href="http://citris-uc.org/decse-organization/">Computational Science and Engineering</a>, to improve my (non-parallel) programming skills, and to learn how to implement machine learning algorithms faster and more efficiently. </p>
 
-<h2 id="kmeans"><i>k</i>-means&nbsp;clustering</h2>
+<h2 id="kmeans"><b>k-means</b> and <b>k-means++</b></h2>
 
-<p><i>k</i>-means clustering is a method for finding clusters and cluster centers in unlabeled data. The goal is to choose <i>k</i> cluster centers to minimize the total squared distance between each data point and its closest center. Given randomly chosen <i>k</i> initial centers, the <b>k-means</b> algorithm alternates between two steps until convergence: (<i>assignment step</i>) for each center, find subset of points or "cluster" that is closer to any other center; (<i>update step</i>) for each cluster, compute vector containing means of each feature, which becomes new cluster center.</p>
+<p><b>k-means</b> is an unsupervised machine learning algorithm for finding clusters and cluster centers in data. The goal is to choose <i>k</i> cluster centers to minimize the total squared distance between each data point and its closest center. Given <i>k</i> initial centers chosen uniformly at random from the data points, <b>k-means</b> alternates between two steps until convergence: (<i>assignment step</i>) each point is assigned to the nearest cluster center and; (<i>update step</i>) each center is recomputed as the center of mass of all points assigned to it.</p>
 
-<p>
-<b>k-means</b> is NP-hard, and can be solved in time <img src="http://mathurl.com/hg9fy9z.png" style="width: 20%; height: 20%"/>, where <i>n</i> is the number of points in <i>d</i> dimensions.
+<p> <b>k-means++</b> chooses only the first cluster center uniformly at random; subsequent centers are selected from the data points, weighed by a probability proportional to its contribution to the overall error. This initialization algorithm is shown to obtain initial centers that is close to the optimum solution.<a href="http://ilpubs.stanford.edu:8090/778/1/2006-13.pdf">[1]</a><a href="http://theory.stanford.edu/~sergei/papers/vldb12-kmpar.pdf">[2]</a></p>
+
+<h2 id="parallel">Scalable <b>k-means++</b></h2>
+
+<!--<p>-->
+<!--<b>k-means</b> is NP-hard, and can be solved in time <img src="http://mathurl.com/hg9fy9z.png" style="width: 20%; height: 20%"/>, where <i>n</i> is the number of points in <i>d</i> dimensions.-->
+<!--</p>-->
+
+<p> <b>k-means++</b> is ill-suited for massive data because it makes <i>k</i> sequential passes over the data points in order to obtain the initial centers. <a href="http://theory.stanford.edu/~sergei/papers/vldb12-kmpar.pdf">[Bahmani and coauthors] propose a method of parallelizing the initialization that reduces the number of passes. Instead of sampling a single point in each pass, the parallel version of <b>k-means++</b> samples <i>O</i>(<i>k</i>) points and repeats for <i>O</i>(log <i>n</i>) rounds. The authors implement this initialization algorithm using MapReduce.<a href="http://dl.acm.org/citation.cfm?id=1327492">[3]
 </p>
-
-<h2 id="parallel">Parallelizing&nbsp;<i>k</i>-means</h2>
-
-
 
 <h2 id="assessment">Assessment</h2>
 

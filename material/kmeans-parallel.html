@@ -96,11 +96,11 @@ for the Designated Emphasis in <a href="http://citris-uc.org/decse-organization/
 The researchers run experiments comparing <b>k-means||</b> against sequential and parallized versions of <b>k-means</b> using three different datasets. The parallel algorithms were implemented using MapReduce <a href="http://dl.acm.org/citation.cfm?id=1327492">[3]</a> and run a Hadoop cluster of 1968 nodes, each with two quad-core 2.5GHz processors and 16GB of memory.</p>
 
 <p>
-Performance is evaluated on two dimensions -- clustering cost and running time -- for different values of <i>k</i>. For the largest data set (<i>n</i> = 4.8M and <i>d</i>=42), <b>k-means||</b> outperforms the paralleized version of <b>k-means</b> by orders of magnitude in terms of cost. <b>k-means||</b> runs about five times faster than the parallelized version of <b>k-means</b>. Unfortunately, the experiments do not compare the algorithms in terms of the memory which is needed for the computation.
+Performance is evaluated on two dimensions -- clustering cost and running time -- for different values of <i>k</i>. For the largest data set (<i>n</i> = 4.8M and <i>d</i>=42), <b>k-means||</b> outperforms the paralleized version of <b>k-means</b> by orders of magnitude in terms of cost. <b>k-means||</b> runs about five times faster than the parallelized version of <b>k-means</b>.
 </p>
 
 <p>
-The main weakness of the study is that the experiments do not compare the algorithms in terms of the memory which is needed for the computation. However, I suspect that <b>k-means||</b> would outperform in terms of space complexity since <i>O</i>(log <i>n</i>) passes are not needed to find an optimal solution; the researchers find a solution as least as good as that of <b>k-means</b> in as little as five rounds. 
+The main weakness of the study is that the experiments do not compare the algorithms in terms of the memory which is needed for the computation. However, I suspect that <b>k-means||</b> would outperform in terms of space complexity since <i>O</i>(log <i>n</i>) passes are not needed to find an optimal solution; the researchers find a solution as least as good as that of <b>k-means</b> in as little as five rounds.
 </p>
 
 </article>          </section>
